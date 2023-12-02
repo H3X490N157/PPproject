@@ -1,0 +1,47 @@
+<html>
+<head>
+  <link rel="stylesheet" href="{{url_for('static', filename='main.css')}}">
+  <link href="https://fonts.googleapis.com/css?family=Acme|K2D" rel="stylesheet">
+  <link rel='icon' href="{{url_for('static', filename='logo.png')}}">
+</head>
+<body>
+  <div class="sticky">
+    <h1>Магазин</h1>
+  </div>
+  <div class="nav">
+    <p><a href="/">Корзина</a> > <a href="/sell/">Оплатить</a> > <a href="">Купить новый товар</a></p>
+  </div>
+  <h2>Добавить в корзину:</h2>
+  <form action="" method="POST">
+    <table>
+      <tr>
+        <td>НАИМЕНОВАНИЕ: </td><td><input type="text" name="name" required></td>
+      </tr>
+      <tr>
+        <td>КОЛИЧЕСТВО: </td><td><input type="number" name="qty" min="0" required></td>
+      </tr>
+      <tr>
+        <td>КАТЕГОРИЯ: </td>
+        <td><select name="category" required>
+          <option value="" disabled selected>Выберите категорию</option>
+          <option value="Electronics and Tech">Электроника</option>
+          <option value="Fashion">Одежда</option>
+          <option value="Educational Utilities">Литература</option>
+          <option value="Entertainment and Recreation">Развлечения</option>
+          <option value="Food and Groceries">Еда</option>
+          <option value="Daily Utilities">Бытовая химия</option>
+          <option value="Sports">Спортивные товары</option>
+          <option value="Сумки"></option>
+        </select></td>
+      </tr>
+      <tr>
+        <td>PRICE(in ₹): </td><td><input type="number" name="цена" min="0" required></td>
+      </tr>
+      <tr>
+        <td>DESCRIPTION: </td><td><textarea name="desp"></textarea></td>
+      </tr>
+    </table>
+    <input type="submit" value="Добавить товар" style="display:block; margin-left:auto; margin-right:auto; margin-top:1vw;">
+  </form>
+</body>
+</html>
